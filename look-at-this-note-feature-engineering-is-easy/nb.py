@@ -68,7 +68,7 @@ num_cols = [
 ]
 
 # %% [markdown]
-# # Linear Transform
+# ## Linear Transform
 
 # %% [markdown]
 # <div style="background-color:rgba(0, 255, 255, 0.6);border-radius:5px;display:fill;">
@@ -159,7 +159,7 @@ train_x[num_cols].describe().T.style.bar(subset=['mean'], color='#205ff2')\
 ## The minimum value is 0 and the maximum value is 1.
 
 # %% [markdown]
-# # Non-linear Transformation
+# ## Non-linear Transformation
 
 # %% [markdown]
 # <div style="background-color:rgba(0, 255, 255, 0.6);border-radius:5px;display:fill;">
@@ -355,7 +355,7 @@ fig.show()
 ## The spread distribution was forced to approximate the normal distribution.
 
 # %% [markdown]
-# # Setting TransForm
+# ## Setting TransForm
 
 # %% [markdown]
 # <div style="background-color:rgba(0, 255, 255, 0.6);border-radius:5px;display:fill;">
@@ -527,7 +527,7 @@ plt.show()
 # #### The values ​​were semi-forced to be normally distributed. The impact of outliers is also expected to decrease.
 
 # %% [markdown]
-# # NEXT PLAN
+# ## NEXT PLAN
 
 # %% [markdown]
 # #### The following tabular data conversion will deal with numeric conversion of category types.
