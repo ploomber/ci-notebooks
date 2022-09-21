@@ -334,7 +334,7 @@ plt.show()
 # ## 3.3. Exploration of Passenger Class
 
 # %% _cell_guid="676548e8-6dd4-4180-800c-7b164acb3877" _uuid="08fd677214959e0b938a0f8a94b63ab548673ea5"
-sns.barplot('Pclass', 'Survived', data=train_df, color="darkturquoise")
+sns.barplot(x='Pclass', y='Survived', data=train_df, color="darkturquoise")
 plt.show()
 
 # %% [markdown] _cell_guid="193233f8-b220-4cae-aa0f-f822316d5623" _uuid="8ddb19191253a6e09dfcb0beff2b3690f1052d52"
@@ -345,7 +345,7 @@ plt.show()
 # ## 3.4. Exploration of Embarked Port
 
 # %% _cell_guid="6e5bec50-2f5e-433e-9130-c56956fddad3" _uuid="a9f0598701c7c5224eaa73dafa869af73beffe18"
-sns.barplot('Embarked', 'Survived', data=train_df, color="teal")
+sns.barplot(x='Embarked', y='Survived', data=train_df, color="teal")
 plt.show()
 
 # %% [markdown] _cell_guid="88d78820-35a5-48fd-a234-9f3ca3fca779" _uuid="2f6a0329cf0c7b771a707ec790efc065924e1ee2"
@@ -370,7 +370,7 @@ plt.show()
 # ## 3.6. Exploration of Gender Variable
 
 # %% _cell_guid="7b416e59-8616-4a44-93e1-a8005eff78a9" _uuid="354794315925dff1e96229cc737eaf299aaea17a"
-sns.barplot('Sex', 'Survived', data=train_df, color="aquamarine")
+sns.barplot(x='Sex', y='Survived', data=train_df, color="aquamarine")
 plt.show()
 
 # %% [markdown] _cell_guid="490ed298-f0e4-466b-acc8-81280315e6a2" _uuid="80c02b9fe2151c443f189cbe44c9cacf7e5c44a4"
