@@ -125,7 +125,7 @@ x = data.drop(list, axis=1)
 x.head()
 
 # %% _cell_guid="31ec8d06-ea25-4b34-84ca-c322b3d8a10f" _execution_state="idle" _uuid="71fecf26e957a2d670182d607aca5a7b92b4a3b6"
-ax = sns.countplot(y, label="Count")  # M = 212, B = 357
+ax = sns.countplot(x=y)  # M = 212, B = 357
 B, M = y.value_counts()
 print('Number of Benign: ', B)
 print('Number of Malignant : ', M)
@@ -220,8 +220,8 @@ plt.xticks(rotation=90)
 # Do not forget, we are not choosing features yet, we are just looking to have an idea about them.
 
 # %% _cell_guid="47880bbb-5dbe-4836-938c-0816a03e8fb4" _execution_state="idle" _uuid="859ec665af4be178c3e36b1c2799f44c5ccef901"
-sns.jointplot(x.loc[:, 'concavity_worst'],
-              x.loc[:, 'concave points_worst'],
+sns.jointplot(x=x.loc[:, 'concavity_worst'],
+              y=x.loc[:, 'concave points_worst'],
               kind="reg",
               color="#ce1414")
 
@@ -233,7 +233,7 @@ sns.jointplot(x.loc[:, 'concavity_worst'],
 sns.set(style="white")
 df = x.loc[:, ['radius_worst', 'perimeter_worst', 'area_worst']]
 g = sns.PairGrid(df, diag_sharey=False)
-g.map_lower(sns.kdeplot, cmap="Blues_d")
+g.map_lower(sns.kdeplot)
 g.map_upper(plt.scatter)
 g.map_diag(sns.kdeplot, lw=3)
 

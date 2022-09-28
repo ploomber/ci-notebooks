@@ -365,21 +365,21 @@ ax[3, 0].set_title('Annual Rainfall (Acc.)', fontsize=14)
 for i in range(4):
     ax[i, 0].set_xlim([date(2009, 1, 1), date(2020, 6, 30)])
 
-sns.lineplot(df.Date, df.Temperature, color='dodgerblue', ax=ax[0, 1])
+sns.lineplot(x=df.Date, y=df.Temperature, color='dodgerblue', ax=ax[0, 1])
 ax[0, 1].set_title('Daily Temperature (Acc.)', fontsize=14)
 
 resampled_df = df[['Date', 'Temperature'
                    ]].resample('7D', on='Date').mean().reset_index(drop=False)
-sns.lineplot(resampled_df.Date,
-             resampled_df.Temperature,
+sns.lineplot(x=resampled_df.Date,
+             y=resampled_df.Temperature,
              color='dodgerblue',
              ax=ax[1, 1])
 ax[1, 1].set_title('Weekly Temperature (Acc.)', fontsize=14)
 
 resampled_df = df[['Date', 'Temperature'
                    ]].resample('M', on='Date').mean().reset_index(drop=False)
-sns.lineplot(resampled_df.Date,
-             resampled_df.Temperature,
+sns.lineplot(x=resampled_df.Date,
+             y=resampled_df.Temperature,
              color='dodgerblue',
              ax=ax[2, 1])
 ax[2, 1].set_title('Monthly Temperature (Acc.)', fontsize=14)
@@ -387,8 +387,8 @@ ax[2, 1].set_title('Monthly Temperature (Acc.)', fontsize=14)
 resampled_df = df[['Date', 'Temperature'
                    ]].resample('365D',
                                on='Date').mean().reset_index(drop=False)
-sns.lineplot(resampled_df.Date,
-             resampled_df.Temperature,
+sns.lineplot(x=resampled_df.Date,
+             y=resampled_df.Temperature,
              color='dodgerblue',
              ax=ax[3, 1])
 ax[3, 1].set_title('Annual Temperature (Acc.)', fontsize=14)
